@@ -82,4 +82,22 @@ class LinkedList
 
     false
   end
+
+  def find(position, data)
+    return [] if position < 0 || data <= 0 || @head.nil?
+
+    found = []
+    current_node = @head
+    count = 0
+
+    while current_node && count < position
+      if count >= position
+        found << current_node.data
+      end
+      current_node = current_node.next_node
+      count += 1
+    end
+
+    found
+  end
 end
