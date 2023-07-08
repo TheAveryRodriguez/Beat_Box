@@ -8,13 +8,16 @@ class LinkedList
   end
 
   def append(data)
-    next_node = Node.new(data)
+    new_node = Node.new(data)
 
     if @head.nil?
-      @head = next_node
+      @head = new_node
     else
-      # Might need a loop (if until?)
       current_node = @head
+      until current_node.next_node.nil?
+        current_node = current_node.next_node
+      end
+      current_node.next_node = new_node
     end
   end
 
@@ -38,7 +41,8 @@ class LinkedList
       string_data << current_node.data
       current_node = current_node.next_node
 
-      # until current_node = nil
+      until current_node.nil?
+      end
     end
 
     string_data.join(" ")

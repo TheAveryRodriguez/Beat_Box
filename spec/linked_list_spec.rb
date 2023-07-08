@@ -18,18 +18,19 @@ describe LinkedList do
     it "should append a node" do
       list = LinkedList.new
       list.append("doop")
+      list.append("deep")
 
       expect(list).to be_a(LinkedList)
       expect(list.head.data).to eq("doop")
-      expect(list.head.next_node).to eq(nil)
-      expect(list).to be_a(LinkedList)
+      expect(list.head.next_node.data).to eq("deep")
     end
 
     it "should count my nodes" do
       list = LinkedList.new
       list.append("doop")
+      list.append("deep")
 
-      expect(list.count).to eq(1)
+      expect(list.count).to eq(2)
     end
 
     it "should turn list into string" do
