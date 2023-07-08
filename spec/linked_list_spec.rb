@@ -36,8 +36,9 @@ describe LinkedList do
     it "should turn list into string" do
       list = LinkedList.new
       list.append("doop")
+      list.append("deep")
 
-      expect(list.to_string).to eq("doop")
+      expect(list.to_string).to eq("doop deep")
     end
   end
 end

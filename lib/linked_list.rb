@@ -41,8 +41,8 @@ class LinkedList
       string_data << current_node.data
       current_node = current_node.next_node
 
-      until current_node.nil?
-      end
+      # until current_node.nil?
+      # end
     end
 
     string_data.join(" ")
