@@ -41,10 +41,35 @@ class LinkedList
       string_data << current_node.data
       current_node = current_node.next_node
 
-      # until current_node.nil?
-      # end
     end
 
     string_data.join(" ")
+  end
+
+  def prepend(data)
+    @head = Node.new(data, @head)
+  end
+
+  def insert(position, data)
+    new_node = Node.new(data)
+
+    if position <= 0
+      new_node.next_node = @head
+      @head = new_node
+    else
+      current_node = @head
+      count = 0
+
+      while count < position - 1 || current_node.next_node.nil?
+        current_node = current_node.next_node
+        count += 1
+      end
+
+      # if current_node
+      new_node.next_node = current_node.next_node
+      current_node.next_node = new_node
+      # end
+
+    end
   end
 end
