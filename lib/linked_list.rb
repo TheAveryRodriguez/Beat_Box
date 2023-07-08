@@ -69,7 +69,19 @@ class LinkedList
       new_node.next_node = current_node.next_node
       current_node.next_node = new_node
       # end
-
     end
+  end
+
+  def include?(data)
+    #    @string_data = to_string.split
+    #   @string_data.include?(data)
+    current_node = @head
+    while current_node
+      return true if
+      current_node.data == data
+      current_node = current_node.next_node
+    end
+
+    false
   end
 end
