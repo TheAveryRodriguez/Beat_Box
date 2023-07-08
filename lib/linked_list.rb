@@ -1,4 +1,4 @@
-require "./lib/node"
+# require "./lib/node"
 
 class LinkedList
   attr_reader :head
@@ -10,7 +10,7 @@ class LinkedList
   def append(data)
     new_node = Node.new(data)
 
-    if @head.nil?
+    if @head.nil? # checks if nil
       @head = new_node
     else
       current_node = @head

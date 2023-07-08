@@ -25,6 +25,14 @@ describe LinkedList do
       expect(list.head.next_node.data).to eq("deep")
     end
 
+    it "should append a node" do
+      list = LinkedList.new
+      list.append("plop")
+
+      expect(list).to be_a(LinkedList)
+      expect(list.head.data).to eq("plop")
+    end
+
     it "should count my nodes" do
       list = LinkedList.new
       list.append("doop")
@@ -40,5 +48,7 @@ describe LinkedList do
 
       expect(list.to_string).to eq("doop deep")
     end
+
+    #    it "should prepend a node"
   end
 end
