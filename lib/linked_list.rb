@@ -65,10 +65,8 @@ class LinkedList
         count += 1
       end
 
-      # if current_node
       new_node.next_node = current_node.next_node
       current_node.next_node = new_node
-      # end
     end
   end
 

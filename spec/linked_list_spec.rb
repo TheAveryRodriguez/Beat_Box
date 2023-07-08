@@ -97,5 +97,16 @@ describe LinkedList do
       # If the position is greater than # of nodes then it appends at the end
       expect(list.to_string).to eq("dop woo plop suu")
     end
+
+    it "should include?" do
+      list = LinkedList.new
+      list.append("deep")
+      list.append("woo")
+      list.append("shi")
+      list.append("shu")
+      list.append("blop")
+
+      expect(list.includes?("deep")).to be(true)
+    end
   end
 end
