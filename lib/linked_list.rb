@@ -31,6 +31,16 @@ class LinkedList
   end
 
   def to_string
-    data = []
+    string_data = []
+    current_node = @head
+
+    while current_node
+      string_data << current_node.data
+      current_node = current_node.next_node
+
+      # until current_node = nil
+    end
+
+    string_data.join(" ")
   end
 end
