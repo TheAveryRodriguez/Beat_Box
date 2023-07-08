@@ -19,12 +19,18 @@ class LinkedList
   end
 
   def count
-    count = 0
+    running_tally = 0
     current_node = @head
 
     while current_node
-      count += 1
+      running_tally += 1
       current_node = current_node.next_node
     end
+
+    running_tally
+  end
+
+  def to_string
+    data = []
   end
 end
