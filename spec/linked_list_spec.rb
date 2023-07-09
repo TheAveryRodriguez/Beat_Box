@@ -107,6 +107,7 @@ describe LinkedList do
       list.append("blop")
 
       expect(list.include?("deep")).to be(true)
+      expect(list.include?("dep")).to be(false)
     end
 
     it "should find" do
