@@ -71,7 +71,7 @@ class LinkedList
   end
 
   def include?(data)
-    #    @string_data = to_string.split
+    #   @string_data = to_string.split
     #   @string_data.include?(data)
     current_node = @head
     while current_node
@@ -84,20 +84,55 @@ class LinkedList
   end
 
   def find(position, data)
-    return [] if position < 0 || data <= 0 || @head.nil?
+    if position < 0 || data <= 0 || @head.nil?
+      return ""
+    end
 
-    found = []
+    found = ""
     current_node = @head
     count = 0
+    amount_data = 0
 
-    while current_node && count < position
-      if count >= position
-        found << current_node.data
-      end
+    while count < position || current_node.nil?
+      # if count >= position
+      #      found << current_node.data
+      # end
+
+      #      found << current_node.data
       current_node = current_node.next_node
       count += 1
     end
 
-    found
+    until amount_data == data || current_node.nil?
+      #    if count >= position
+      found << current_node.data << " "
+      #    end
+      current_node = current_node.next_node
+      amount_data += 1
+    end
+
+    #    while
+    #      count the amount of data
+    #      found << current_node.data
+    #    end
+    found.strip
+  end
+
+  def pop
+    if @head.next_node.nil?
+      @head = nil # If there is only one node, set head to nil
+    else
+      current_node = @head
+      previous_node = nil
+
+      while current_node.next_node
+        previous_node = current_node
+        current_node = current_node.next_node
+      end
+
+      removed_data = current_node.data
+      previous_node.next_node = nil # Set the next_node of the previous_node to nil!
+    end
+    removed_data
   end
 end
