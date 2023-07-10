@@ -11,11 +11,11 @@ describe BeatBox do
     end
 
     it "should append a node" do
-      list = LinkedList.new
-      list.append("deep doo ditt")
+      bb = BeatBox.new
+      bb.append("deep doo ditt")
 
       expect(bb).to be_a(BeatBox)
-      expect(list.head.data).to eq("deep")
+      expect(bb.list.head.data).to eq("deep")
     end
   end
 end
