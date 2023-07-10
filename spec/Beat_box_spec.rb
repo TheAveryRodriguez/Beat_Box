@@ -9,5 +9,13 @@ describe BeatBox do
 
       expect(bb).to be_a(BeatBox)
     end
+
+    it "should append a node" do
+      list = LinkedList.new
+      list.append("deep doo ditt")
+
+      expect(bb).to be_a(BeatBox)
+      expect(list.head.data).to eq("deep")
+    end
   end
 end

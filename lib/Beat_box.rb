@@ -6,7 +6,7 @@ class BeatBox
   end
 end
 
-def append
+def append(data)
   @list.append
 end
 
