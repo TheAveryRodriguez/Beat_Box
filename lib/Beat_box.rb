@@ -19,5 +19,7 @@ class BeatBox
   end
 
   def play
+    beat = new_datas
+    `say #{beat}`
   end
 end
