@@ -94,7 +94,7 @@ describe LinkedList do
       list.append("suu")
       list.prepend("dop")
       list.insert(1, "woo")
-      # If the position is greater than # of nodes then it appends at the end
+
       expect(list.to_string).to eq("dop woo plop suu")
     end
 
