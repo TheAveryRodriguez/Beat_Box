@@ -1,5 +1,3 @@
-# require "./lib/node"
-
 class LinkedList
   attr_accessor :head
 
@@ -10,7 +8,7 @@ class LinkedList
   def append(data)
     new_node = Node.new(data)
 
-    if @head.nil? # checks if nil
+    if @head.nil?
       @head = new_node
     else
       current_node = @head
@@ -71,8 +69,6 @@ class LinkedList
   end
 
   def include?(data)
-    #   @string_data = to_string.split
-    #   @string_data.include?(data)
     current_node = @head
     while current_node
       return true if
