@@ -1,3 +1,5 @@
+require "./lib/linked_list"
+
 class BeatBox
   attr_reader :list
 
