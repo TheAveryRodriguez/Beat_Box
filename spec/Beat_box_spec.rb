@@ -42,6 +42,22 @@ describe BeatBox do
     end
   end
 
+  describe "#all" do
+    it "returns all my beats" do
+      bb = BeatBox.new
+
+      expect(bb.all).to be_empty
+
+      bb.append("deep")
+
+      expect(bb.all).to eq("deep")
+
+      bb.prepend("bop")
+
+      expect(bb.all).to eq("bop deep")
+    end
+  end
+
   describe "#play" do
     it "should play my beats" do
       bb = BeatBox.new

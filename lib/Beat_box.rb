@@ -20,9 +20,11 @@ class BeatBox
     @list.prepend(data)
   end
 
-  def play
-    beats = @list.to_string
+  def all
+    @list.to_string
+  end
 
-    `say #{beats}`
+  def play
+    `say #{all}`
   end
 end
