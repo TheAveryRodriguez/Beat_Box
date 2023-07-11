@@ -14,12 +14,13 @@ class BeatBox
     @list.count
   end
 
-  def prepend
-    @list.prepend
+  def prepend(data)
+    @list.prepend(data)
   end
 
   def play
-    beat = new_datas
-    `say #{beat}`
+    beats = @list.to_string
+
+    `say #{beats}`
   end
 end
