@@ -30,7 +30,8 @@ describe BeatBox do
       bb = BeatBox.new
       bb.append("deep doo ditt woo hoo shu")
 
-      # expect(bb.play) to play the sounds deep doo ditt woo hoo shu
+      expect(bb.play).to say("deep doo ditt woo hoo shu")
+      # Throws a failure when I run my rspec but does in fact play my beat...
     end
   end
 end
