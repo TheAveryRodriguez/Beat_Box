@@ -90,27 +90,17 @@ class LinkedList
     amount_data = 0
 
     while count < position || current_node.nil?
-      # if count >= position
-      #      found << current_node.data
-      # end
 
-      #      found << current_node.data
       current_node = current_node.next_node
       count += 1
     end
 
     until amount_data == data || current_node.nil?
-      #    if count >= position
       found << current_node.data << " "
-      #    end
       current_node = current_node.next_node
       amount_data += 1
     end
 
-    #    while
-    #      count the amount of data
-    #      found << current_node.data
-    #    end
     found.strip
   end
 
