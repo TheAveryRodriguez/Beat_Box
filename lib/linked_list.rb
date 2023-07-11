@@ -106,7 +106,7 @@ class LinkedList
 
   def pop
     if @head.next_node.nil?
-      @head = nil # If there is only one node, set head to nil
+      @head = nil
     else
       current_node = @head
       previous_node = nil
@@ -117,7 +117,7 @@ class LinkedList
       end
 
       removed_data = current_node.data
-      previous_node.next_node = nil # Set the next_node of the previous_node to nil!
+      previous_node.next_node = nil
     end
     removed_data
   end
