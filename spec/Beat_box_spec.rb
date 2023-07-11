@@ -69,4 +69,17 @@ describe BeatBox do
       bb.play
     end
   end
+
+  describe "vaild_beats" do
+    it "returns list of valid beats" do
+      bb = BeatBox.new
+
+      expect(bb.valid_beats).to eq("tee dee deep bop boop la na")
+    end
+  end
+
+  describe "beat validation" do
+    it "only adds beats from the approved list" do
+    end
+  end
 end

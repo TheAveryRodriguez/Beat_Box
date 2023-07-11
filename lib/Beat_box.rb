@@ -20,6 +20,10 @@ class BeatBox
     @list.prepend(data)
   end
 
+  def valid_beats
+    "tee dee deep bop boop la na"
+  end
+
   def all
     @list.to_string
   end
